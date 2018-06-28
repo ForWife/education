@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台系统</title>
+		<link rel="stylesheet" href="css/layui.css">
+		<style>
+			body {
+				background-color: #F2F2F2;
+			}
+			.inputStyle {
+				height: 2/34px;
+				width: 80px;
+				line-height: 20px;
+				padding: 0 0px;
+				margin: 0 0px;
+				border-radius: 200px;
+			}
+			
+			.inputTimeStyle{
+				height: 2/34px;
+				width: 130px;
+				line-height: 20px;
+				padding: 0 0px;
+				margin: 0 0px;
+				border-radius: 10px;
+			}
+			
+			.inputButton{
+				height: 25px;
+				line-height: 24px;
+				padding: 0 38px;
+				margin: 0 40px;
+				border-radius: 200px;
+				display: inline-block;
+			}
+			.layui-card-header span{
+				margin-left: 2.5%;
+			}
+			.layui-card-header button{
+				background: #ffffff;
+			}
+			.layui-card-header button:hover{
+				background: #F2F2F2;			
+			}
+			
+			.layui-card-body .tableStyle{
+				margin: 2%;
+				width:96%;
+    			border: 1px solid #d9d9d9;
+    			border-collapse: collapse;
+			    border-spacing: 0;
+			    table-layout: fixed;
+			}
+			.layui-card-body .tableStyle th{
+				padding-left: 5px;
+				text-align:left;
+				height: 40px;
+			    background-color: #f7f7f7;
+			    background-position: 0 0;
+			    background-repeat: repeat-x;
+			    font-weight: normal;
+			    font-size: 11px;
+			    color: #666;
+			    background: url(img/listHeadBackground.JPG) no-repeat;
+			    background-size:100% 100%;
+			    border: 1px solid #d9d9d9;
+			}
+			.layui-card-body .tableStyle .th1{
+				width: 5%;
+			}
+			.layui-card-body .tableStyle .th2{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th3{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th4{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th5{
+				width: 5%;
+			}
+			.layui-card-body .tableStyle .th6{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th7{
+				width: 5%;
+			}
+			.layui-card-body .tableStyle .th8{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th9{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .th10{
+				width: 10%;
+			}
+			.layui-card-body .tableStyle .trBackground{
+				padding-left: 10px;
+				text-align:left;
+				font-size: 11px;
+				background-color: #f7f7f7;
+				height: 25px;
+    			line-height: 18px;
+    			
+			}
+			.layui-card-body .tableStyle .trBackground2{
+				padding-left: 10px;
+				text-align:left;
+				font-size: 11px;
+				height: 25px;
+    			line-height: 18px;
+    			
+			}
+			.layui-card-body .tableStyle .dealAll{
+				overflow: hidden;
+			}
+			.layui-card-body .tableStyle .dealAll .dealWord{
+				display: block;
+			}
+			.layui-card-body .tableStyle .dealAll .dealA{
+				display: none;
+			}
+			.layui-card-body .tableStyle .dealAll:hover .dealWord{
+				display: none;
+			}
+			.layui-card-body .tableStyle .dealAll:hover .dealA{
+				color: #D3D4D3;
+				display: block;
+			}
+
+		</style>
+		
+		
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<h1 style="margin: 2%;">订单查询</h1>
+		<div class="layui-card" style="margin: 2%">
+  			<div class="layui-card-header">
+  				<form action = "" >
+	  				<span>
+	  					检索
+	  				</span>
+	  				<span>
+	  					关键字：<input class = "inputStyle" type="text" name = "keyword" />
+	  				</span>
+	  				<span>
+	  					预约状态：<input class = "inputStyle" type="text" list = "stateList"  autocomplete="off" name = "state" />
+	  					<datalist id="stateList">
+						    <option>已退款</option>
+						    <option>退款中</option>
+						    <option>代付款</option>
+						    <option>已付款</option>
+						</datalist>  
+	  				</span>
+	  				<span>
+	  					预约时间：自 <input class = "inputTimeStyle" type = "date" name = "startTime">至 <input class = "inputTimeStyle" type = "date" name = "endTime">
+	  				</span>
+	  				<span>
+	  					<button class = "inputButton">
+	  						查询
+	  						<i class="layui-icon layui-icon-search" style = "font-size: 13px;"></i>   
+	  					</button>
+	  				</span>
+  				</form>	
+  			</div>
+  			<div class="layui-card-body">
+   				 <table class = "tableStyle">
+   				 	<thead>
+   				 		<tr>
+   				 			<th class = "th1">课程编号</th>
+   				 			<th class = "th2">订单编号</th>
+   				 			<th class = "th3">用户昵称</th>
+   				 			<th class = "th4">用户电话</th>
+   				 			<th class = "th5">订单金额</th>
+   				 			<th class = "th6">代金券编号</th>
+   				 			<th class = "th7">实付金额</th>
+   				 			<th class = "th8">订单状态</th>
+   				 			<th class = "th9">下单时间</th>
+   				 			<th class = "th10">交易流水号</th>
+   				 		</tr>
+   				 	</thead>
+   				 	<tbody>
+   				 		<tr>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">退款中</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">退款处理</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		<tr>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">已付款</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">订单核销</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		
+   				 		
+   				 		
+   				 		
+   				 		<tr>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">退款中</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">退款处理</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		<tr>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">已付款</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">订单核销</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 		</tr><tr>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">退款中</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">退款处理</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		<tr>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">已付款</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">订单核销</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 		</tr><tr>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">退款中</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">退款处理</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		<tr>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">已付款</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">订单核销</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 		</tr><tr>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">退款中</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">退款处理</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		<tr>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				<div class = "dealAll">
+   				 					<span class = "dealWord">已付款</span>
+   				 					<span class = "dealA"><a class = "layui-icon layui-icon-ok" style="font-size: 11px;" href="">订单核销</a></span>
+   				 				</div>
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 			<td class = "trBackground2">
+   				 				1111
+   				 			</td>
+   				 		</tr>
+   				 		
+   				 		
+   				 		
+   				 		
+   				 		
+   				 		
+   				 	</tbody>
+				</table>
+  			</div>
+		</div>
+		
+		
+		
+		<center>
+        <div id="test1"></div>
+    </center>
+
+
+    <script src="layui.js"></script>
+    <script>
+        layui.use('laypage', function () {
+            var laypage = layui.laypage;
+
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+                    ,
+                count: 50 //数据总数，从服务端得到
+            });
+        });
+    </script>
+	</body>
+</html>

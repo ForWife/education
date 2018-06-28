@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台系统</title>
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+    <script type="text/javascript" charset="utf-8" src="ue/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ue/ueditor.all.min.js">
+    </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="ue/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+
+<body style="background-color: #F2F2F2;">
+    <div class="layui-card" style="padding: 2%;">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">试听课名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">试听课简介</label>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea" placeholder="请输入内容"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程图片</label>
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="test1">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程详情</label>
+                <div class="layui-input-block">
+                    <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">试听课类别</label>
+                <div class="layui-input-inline">
+                    <div class="layui-input-inline">
+                        <select name="modules" lay-search="" lay-verify="required">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">layer</option>
+                            <option value="2">form</option>
+                            <option value="3">layim</option>
+                            <option value="4">element</option>
+                            <option value="5">laytpl</option>
+                            <option value="6">upload</option>
+                            <option value="7">laydate</option>
+                            <option value="8">laypage</option>
+                            <option value="9">flow</option>
+                            <option value="10">util</option>
+                            <option value="11">code</option>
+                            <option value="12">tree</option>
+                            <option value="13">layedit</option>
+                            <option value="14">nav</option>
+                            <option value="15">tab</option>
+                            <option value="16">table</option>
+                            <option value="17">select</option>
+                            <option value="18">checkbox</option>
+                            <option value="19">switch</option>
+                            <option value="20">radio</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+			<div class="layui-form-item">
+                <label class="layui-form-label">所在分部</label>
+    <div class="layui-input-block">
+      <input name="fenbu" title="巴拉巴拉吧" type="radio" checked="" value="你们慢慢">
+      <input name="fenbu" title="大西洋" type="radio" value="大西洋">
+	  <input name="fenbu" title="你家" type="radio" value="你家">
+    </div>
+            </div>
+    </div>
+    <div style="margin:auto;width: 20%;">
+        <button class="layui-btn layui-btn-lg" onclick="">提交</button>
+    </div>
+    </form>
+	<script src="layui.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+		layui.use('form', function(){
+		  var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+		
+		});    
+    </script>
+</body>
+
+</html>

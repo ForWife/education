@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/layui.css">
+		<script>
+			var autoTextarea = function(elem, extra, maxHeight) {
+				extra = extra || 0;
+				var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
+					isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
+					addEvent = function(type, callback) {
+						elem.addEventListener ?
+							elem.addEventListener(type, callback, false) :
+							elem.attachEvent('on' + type, callback);
+					},
+					getStyle = elem.currentStyle ? function(name) {
+						var val = elem.currentStyle[name];
+
+						if(name === 'height' && val.search(/px/i) !== 1) {
+							var rect = elem.getBoundingClientRect();
+							return rect.bottom - rect.top -
+								parseFloat(getStyle('paddingTop')) -
+								parseFloat(getStyle('paddingBottom')) + 'px';
+						};
+
+						return val;
+					} : function(name) {
+						return getComputedStyle(elem, null)[name];
+					},
+					minHeight = parseFloat(getStyle('height'));
+
+				elem.style.resize = 'none';
+
+				var change = function() {
+					var scrollTop, height,
+						padding = 0,
+						style = elem.style;
+
+					if(elem._length === elem.value.length) return;
+					elem._length = elem.value.length;
+
+					if(!isFirefox && !isOpera) {
+						padding = parseInt(getStyle('paddingTop')) + parseInt(getStyle('paddingBottom'));
+					};
+					scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+					elem.style.height = minHeight + 'px';
+					if(elem.scrollHeight > minHeight) {
+						if(maxHeight && elem.scrollHeight > maxHeight) {
+							height = maxHeight - padding;
+							style.overflowY = 'auto';
+						} else {
+							height = elem.scrollHeight - padding;
+							style.overflowY = 'hidden';
+						};
+						style.height = height + extra + 'px';
+						scrollTop += parseInt(style.height) - elem.currHeight;
+						document.body.scrollTop = scrollTop;
+						document.documentElement.scrollTop = scrollTop;
+						elem.currHeight = parseInt(style.height);
+					};
+				};
+
+				addEvent('propertychange', change);
+				addEvent('input', change);
+				addEvent('focus', change);
+				change();
+			};
+
+			function setImagePreviews(avalue) {
+				var docObj = document.getElementById("picInput");
+				var fileList = docObj.files;
+				var fileList2 = docObj.files;
+				for(var i = 0; i < fileList.length; i++) {
+					var img = new Image();
+					var path = window.URL.createObjectURL(fileList[i]);
+					img.src = path;
+					img.onload = function() {
+						if(img.height > img.width) {
+							dd.innerHTML += "<li><img class = 'pheigh' id='img" + number + "' /></li>";
+						} else {
+							dd.innerHTML += "<li><img class = 'pwidth' id='img" + number + "' /></li>";
+						}
+						var imgObjPreview = document.getElementById("img" + number);
+						imgObjPreview.src = path;
+						number++;
+					}
+				}
+				return true;
+			}
+		        	
+		    function display(){
+		    	document.getElementById("hideDiv1").style.display = "block";
+		    }
+		</script>
+
+		<style>
+			.timeStyle {
+				margin-left: 0px;
+			}
+			
+			.timeStyle .wordStyle {
+				color: #777777;
+			}
+			
+			.pictureStyle {
+				width: 350px;
+				margin-left: 0px;
+				overflow: hidden;
+			}
+			
+			.pictureStyle ul {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.pictureStyle li {
+				width: 110px;
+				height: 110px;
+				float: left;
+				overflow: hidden;
+				border: 2px solid #FFFFFF;
+			}
+			
+			.pictureStyle .pwidth {
+				height: 100%;
+				width: auto;
+				left: 50%;
+				position: relative;
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-moz-transform: translateX(-50%);
+			}
+			
+			.pictureStyle .pheigh {
+				width: 100%;
+				height: auto;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				position: relative;
+			}
+			
+			.add1 {
+				display: block;
+			}
+			
+			.add2 {
+				display: none;
+			}
+			
+			.centerHover:hover .add1 {
+				display: none;
+			}
+			
+			.centerHover:hover .add2 {
+				display: block;
+			}
+			
+			.areaStyle {
+				border: 1px solid;
+				overflow-x: hidden;
+				overflow-y: hidden;
+				width: 96%;
+			}
+			
+			.picDiv{
+				width: 110px;
+				height: 110px;
+                overflow: hidden;  
+                color:#505050;  
+                background-color: #F2F2F2;  
+                font-size: 50px;
+                padding-left: 30px;
+                line-height: 110px;
+			}
+			.picDiv input{
+				position: absolute;  
+                width: 110px;  
+                height: 110px;
+                margin-left: -80px; 
+                outline: none;  
+                background-color: transparent;  
+                filter:alpha(opacity=0);  
+                -moz-opacity:0;  
+                -khtml-opacity: 0;  
+                opacity: 0;
+			}
+			
+			.hideDiv{
+				display: none;
+			}
+			.clockA:target .hideDiv{
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: #F2F2F2;">
+		<div class="layui-card" style="margin: 2%">
+			<div class="layui-card-body">
+				<span>东软睿道</span>
+				<span class="layui-icon layui-icon-delete" style="float: right; margin-right: 10px;"></span>
+				<span class="layui-icon layui-icon-edit" style="float: right;margin-right: 13px;"></span>
+				<div class="timeStyle">
+					<span class="wordStyle">Posted on January 18, 2016</span>
+				</div>
+			</div>
+			<div class="layui-card-body" style="border-top: #d9d9d9 1px solid; ">
+				<div style="width: 350px;">
+					欲买桂花同载酒。
+				</div>
+				<div class="pictureStyle ">
+					<ul>
+						<li><img class = "pwidth" src="image/cbd.jpg" /></li>
+						<li><img class = "pwidth" src="image/shuijiao.jpg" /></li>
+						<li><img class = "pwidth" src="image/yuantiao.jpg" /></li>
+						<li><img class = "pwidth" src="image/muwu.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-card-body" style="border-top: #d9d9d9 1px solid; ">
+				<div style="width: 350px;">
+					<span class="layui-icon layui-icon-praise" style="color: red;"></span>
+					<span>小名</span>
+				</div>
+				<div>
+					<span>小名：</span>
+					<span style="width: 350px;">哈哈哈</span>
+					<span class="layui-icon layui-icon-delete" style="float: right; margin-right: 10px;"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-card" style="margin: 2%">
+			<div class="layui-card-body" style="height:30px; overflow: hidden;">
+				<a class = "clockA" href="javascript:display();">
+					<center class="centerHover">
+						<div class="add1 layui-icon layui-icon-add-circle-fine" style="font-size: 30px; font-weight: 800;"></div>
+						<div class="add2">添加</div>
+					</center>
+				</a>
+			</div>
+		</div>
+
+		<div id = "hideDiv1" class="layui-card hideDiv" style="margin: 2%">
+			<div class="layui-card-body" style = " overflow: hidden;">
+				<div style="margin: 10px; border-bottom: #d9d9d9 1px solid;">
+					<span>
+						信息发布
+					</span>
+					<span>
+						<div class = "layui-icon layui-icon-release" style = "float:right; margin:0 10px"></div>
+					</span>
+					<span>
+						<a class = "layui-icon layui-icon-delete" style = "float:right;margin:0 10px" href = "#"></a>
+					</span?>
+					
+				</div>
+				<form>
+					<div>
+						<center>
+							<textarea id="areaJs" class="areaStyle"></textarea>
+							<script>
+								var text = document.getElementById("areaJs");
+								autoTextarea(text); // 调用
+							</script>
+						</center>
+					</div>
+					
+					<div class="pictureStyle " style = "margin: 10px">
+						<ul>
+							<div id = "pic"></div>
+							<script>
+								var dd = document.getElementById("pic");
+								dd.innerHTML = "";
+								var number = 0;
+							</script>
+							<li>
+								<div class = "picDiv layui-icon layui-icon-picture">
+									<input  type="file" id = "picInput" multiple="multiple" onchange="javascript:setImagePreviews();" accept="image/*" />
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					
+				</form>
+				
+			</div>
+		</div>
+
+	</body>
+
+</html>

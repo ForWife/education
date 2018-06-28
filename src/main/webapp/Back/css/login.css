@@ -1,0 +1,199 @@
+/**************************以下为login的css******************************/
+*
+{  
+	margin: 0;  padding: 0;
+}
+
+
+.background
+{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ background-image: url(back.jpg);
+ background-repeat:no-repeat ;
+ background-size: cover;
+}
+
+.background img
+{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ no-repeat;
+}
+
+.main1
+{
+	width:600px;
+	margin: 0px auto; 	
+	text-align: center;	
+}
+
+.logo
+{
+	margin:0px auto ; 
+	padding:90px  0px 0px 0px;	
+	text-align: center;
+	width:600px;
+	height: 140px;	
+	font-family:"方正舒体";
+	font-size: 34px;
+	color: #FFFFFF;	
+	text-align: center;
+}
+
+
+
+.logo .slogan
+{
+    position:relative;
+    font-family: "仿宋";
+	font-size: 20px;
+	margin:20px  auto 0px auto; 	
+	text-align: center;
+}
+
+/*lr 意思就是注册登录两个滑动按钮的板块 login&register*/
+
+.form-login
+{
+	margin: 0 0 0 150px;
+	width: 300px;
+	text-align: center;
+    font-family: "Microsoft YaHei", sans-serif;<!--等宽字体-->
+}
+
+.form-login .lr
+{
+      margin-bottom: 10px;
+      font-size: 18px;
+}
+
+.lr .slider
+{
+      display: inline-block;
+      position: relative;
+}
+    
+.lr .slider a.active 
+{
+      opacity: 1;/*透明度*/
+      color: #FFFFFF;
+}
+
+.lr .slider a 
+{
+      display: inline-block;
+      width: 6em;  /*em是相对的长度单位*/
+      line-height: 35px;
+      transition: .15s;/*变换延续时间*/
+      text-decoration: none;
+      opacity: .7;
+      color:#FFFFFF;
+}
+
+.lr .slider a:hover 
+{
+      opacity: 1;
+}
+    
+.lr .slider .bar
+{
+	position: absolute;
+    width: 3em;
+    height: 2px;
+    background-color: #0f88eb;
+    margin: 0 0.8em;
+    transition: 0.15s ease-in;/*动态加速效果*/
+    left: 0.69em;
+    bottom: 0;
+}  
+
+.register, .login 
+{
+      font-size: 14px;
+      text-align: left;
+}
+    
+.group-inputs
+{
+      padding: 0px 0;
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+     
+}
+    
+.group-inputs input 
+{
+      font-family: inherit;/*继承父级元素的字体*/
+      border: 0;
+      border-top: 1px solid #e8e8e8;
+      width: 100%;
+      height: 48px;
+      box-sizing: border-box;
+      padding: 14px 11.2px;
+      outline: none;/*很重要的！聚焦不出现边框*/
+      font-size: 14px;
+}
+
+.group-inputs input:first-child
+{
+      border-top: none;
+      height: 47px;
+}
+    
+.sub
+{
+      margin-top: 18px;
+      background-color: #0f88eb;
+      border: none;
+      border-radius: 3px;
+      line-height: 41px;
+      color: #fff;
+      width: 100%;
+      font-size: 15px;
+      font-family: inherit;
+      cursor: pointer;/*指针变手*/
+}
+
+.sub:hover
+{
+      opacity: .6;
+}
+ 
+.ps
+{
+	font-family: "微软雅黑";
+	margin-top: 21px;
+    font-size: 13px;
+    text-align: center;
+    color: #555555;
+} 
+    
+.ps a
+{
+	text-decoration: none;
+	color: #0F88EB;
+}
+
+.ps a:hover
+{
+	opacity: .6;
+}
+
+.unable-login
+{
+    float: right;
+    text-decoration: none;
+    font-family: "微软雅黑";
+	margin-top: 10px;
+    font-size: 13px;
+    color: #555555;
+}
+
+.unable-login:hover
+{
+    color:#0F88EB;
+}
+

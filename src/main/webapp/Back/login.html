@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>企业管理系统的登录</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">	
+			
+	</head>
+	
+	<body>
+	<div class="background">
+	<div class="main1">
+		
+	<!--
+    	作者：czy1997@126.com
+    	时间：2017-10-08
+    	描述：标题板块
+    -->	
+	<div class="logo">
+	Information Management System
+		<div class="slogan">
+		一个专业的企业信息管理平台！
+		</div>			
+	</div>
+	
+	<!--
+    	作者：czy1997@126.com
+    	时间：2017-10-08
+    	描述：登录注册滑动表单板块
+    -->
+    
+	 <div class=form-login>
+	 	<!--
+         	作者：czy1997@126.com
+         	时间：2017-10-08
+         	描述：滑动按钮
+         -->
+      <div class=lr>
+        <div class=slider>
+          <a href="#register" class="active">管理员</a><a href="#login">超级管理员</a>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <!--
+      	作者：czy1997@126.com
+      	时间：2017-10-08
+      	描述：注册
+      -->
+      <div class="register">
+        <form action="#" onsubmit="return toVaild()" method="post">
+                         <!--
+                         	作者：czy1997@126.com
+                         	时间：2017-01-08
+                         	描述：注册表单提交处
+                         -->
+          <div class="group-inputs">
+            <input id="name" type="text" placeholder="帐号">
+            <input id="password" type="password" placeholder="密码">
+          </div>
+          <button type="submit" class="sub">管理员登录</button>
+        </form>
+      </div>
+      <!--
+      	作者：czy1997@126.com
+      	时间：2017-10-08
+      	描述：登录
+      -->
+      <div class="login" style="display: none;">
+        <form action="#" onsubmit="return Vaild()" method="post">
+        	<!--
+                         	作者：czy1997@126.com
+                         	时间：2017-10-09
+                         	描述：登录表单提交处
+                         -->
+          <div class="group-inputs">
+            <input id="nameorphone" type="text" placeholder="帐号">
+            <input id="pass" type="password" placeholder="密码">
+          </div>
+          <button type="submit" class="sub">超级管理员登录</button>         
+        </form>
+      </div>
+      
+    </div>
+	</div>  
+	</div>
+	<script type="text/javascript" src="js/login.js"></script>
+	</body>
+	
+</html>

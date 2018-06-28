@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台系统</title>
+    <link rel="stylesheet" href="css/layui.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">后台系统</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">退出</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">企业管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="com_intro.html" target="content">企业信息</a>
+                            </dd>
+                            <dd>
+                                <a href="part_list.html" target="content">分部管理</a>
+                            </dd>
+                            <dd>
+                                <a href="teacher.html" target="content">教师管理</a>
+                            </dd>
+
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">课程管理</a>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="trial.html" target="content">试听课管理</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="quality.html" target="content">精品课管理</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;">用户管理</a>
+                        <dl class="layui-nav-child">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">订单管理</a>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="Order.html" target="content">订单管理</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="bespeak.html" target="content">预约管理</a>
+                                    </dd>
+
+                                </dl>
+                            </li>
+
+                            <dd>
+                                <a href="circleOfFriend.html" target="content">朋友圈管理</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <iframe id="content" name="content" src="com_intro.html" style="overflow: visible;" scrolling="yes" frameborder="no" width="100%"
+                height="100%"></iframe>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © layui.com - 底部固定区域
+        </div>
+    </div>
+    <script src="layui.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
