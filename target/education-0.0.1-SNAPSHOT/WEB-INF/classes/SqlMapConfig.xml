@@ -8,13 +8,13 @@
 			<!-- 数据源 -->
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://localhost:3306/webpro" />
+				<property name="url" value="jdbc:mysql://203.195.242.172:3306/neuer" />
 				<property name="username" value="root" />
 				<property name="password" value="123456" />
 			</dataSource>
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="com/neu/mapper/UserinfoMapper.xml" />
+		 <mapper resource="com/neu/mapper/DemoMapper.xml" />
 	</mappers>
 </configuration>

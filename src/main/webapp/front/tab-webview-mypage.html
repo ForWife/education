@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html>
-	<head>	
-		<meta charset="UTF-8">
-		<title>我的</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		
-		<link rel="stylesheet" type="text/css" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/mypage.css">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<style>
-			#list {
-				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
-				margin-top: -1px;
-			}
-			html,
-			body {
-				background-color: #efeff4;
-			}
-			.title{
-				margin: 20px 15px 10px;
-				color: #6d6d72;
-				font-size: 15px;
-			}
-		</style>
-	</head>
-	
-	<body>
-		<div class="background">
-			<div class="up_back">
-				<div class="myinfo">
-					<div class="mypic"><img src="images/fyy.jpg" class="mytouxiang"></div>
-					<div class="myname">费圆圆</div>
-				</div>
-			</div>
-			
-			
-			<div class="down_back">
-				<div class="down_content">
-				<table class="down_content">
-					<tr height="80px">
-						<td>
-							<a href="#" id="reserve">
-							<div class="down_choice">
-								<div class="choice_pic"><span class="mui-icon mui-icon-chatbubble"></span></div>
-								<div class="choice_word">我的预约</div>
-							</div>	
-							</a>
-						</td>
-						<td>
-							<a href="#" id="order">
-						<div class="down_choice">
-								<div class="choice_pic"><span class="mui-icon mui-icon-chatboxes"></span></div>
-								<div class="choice_word">我的订单</div>
-							</div>	
-							</a>
-						</td>
-						<td>
-							<a href="#">
-							<div class="down_choice">
-								<div class="choice_pic"><span class="mui-icon mui-icon-person"></span></div>
-								<div class="choice_word">联系客服</div>
-							</div>
-							</a>
-						</td>
-					</tr>	
-				</table>
-				
-				</div>
-			</div>
-		</div>
-		
-	</body>
-	<script src="js/mui.min.js"></script>
-	<script>
-		mui.init({
-			swipeBack:true //启用右滑关闭功能
-		});
-	</script>
-	<script>
-		mui('body').on('tap','a',function(){document.location.href=this.href;});
-		mui.plusReady(function() {
-							document.getElementById("reserve").addEventListener("tap", function() {
-									mui.openWindow({
-											url: "my-reserve.html"
-									});
-							});
-							document.getElementById("order").addEventListener("tap", function() {
-									mui.openWindow({
-											url: "my-order.html"
-									});
-							});
-		})
-	</script>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mypage.css">
+
+    <style>
+        #list {
+            /*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
+            margin-top: -1px;
+        }
+
+        html,
+        body {
+            background-color: #efeff4;
+        }
+
+        .title {
+            margin: 20px 15px 10px;
+            color: #6d6d72;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="background">
+    <div class="up_back">
+        <div class="myinfo">
+            <div class="mypic"><img src="images/fyy.jpg" class="mytouxiang"></div>
+            <div class="myname">费圆圆</div>
+        </div>
+    </div>
+
+
+    <div class="down_back">
+        <div class="down_content">
+            <table class="down_content">
+                <tr height="80px">
+                    <td>
+                        <a href="#" id="reserve">
+                            <div class="down_choice">
+                                <div class="choice_pic"><span class="mui-icon mui-icon-chatbubble"></span></div>
+                                <div class="choice_word">我的预约</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" id="order">
+                            <div class="down_choice">
+                                <div class="choice_pic"><span class="mui-icon mui-icon-chatboxes"></span></div>
+                                <div class="choice_word">我的订单</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <div class="down_choice">
+                                <div class="choice_pic"><span class="mui-icon mui-icon-person"></span></div>
+                                <div class="choice_word">联系客服</div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+</script>
+<script>
+    mui('body').on('tap', 'a', function () {
+        document.location.href = this.href;
+    });
+    mui.plusReady(function () {
+        document.getElementById("reserve").addEventListener("tap", function () {
+            mui.openWindow({
+                url: "my-reserve.html"
+            });
+        });
+        document.getElementById("order").addEventListener("tap", function () {
+            mui.openWindow({
+                url: "my-order.html"
+            });
+        });
+    })
+</script>
 </html>

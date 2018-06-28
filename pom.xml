@@ -141,25 +141,39 @@
   <!-- 配置build环境 -->
    <build>
        <plugins>
-          <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-					<encoding>utf-8</encoding>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<port>8081</port>
-					<path>/maven-test</path>
-				</configuration>
-			</plugin>      
+           <plugin>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <configuration>
+                   <source>1.8</source>
+                   <target>1.8</target>
+                   <encoding>UTF-8</encoding>
+                   <compilerArguments>
+                       <extdirs>src\main\webapp\WEB-INF\lib</extdirs>
+                   </compilerArguments>
+               </configuration>
+           </plugin>
        </plugins>
-  </build> 
+       <resources>
+           <resource>
+               <directory>src/main/resources</directory>
+               <includes>
+                   <include>**/*.properties</include>
+                   <include>**/*.xml</include>
+                   <include>**/*.tld</include>
+               </includes>
+               <filtering>false</filtering>
+           </resource>
+           <resource>
+               <directory>src/main/java</directory>
+               <includes>
+                   <include>**/*.properties</include>
+                   <include>**/*.xml</include>
+                   <include>*.xml</include>
+                   <include>**/*.tld</include>
+               </includes>
+               <filtering>false</filtering>
+           </resource>
+       </resources>
+
+   </build>
 </project>

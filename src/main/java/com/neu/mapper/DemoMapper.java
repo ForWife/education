@@ -1,12 +1,11 @@
 package com.neu.mapper;
 
-import java.util.List;
-
+import com.neu.po.Lesson;
 import org.apache.ibatis.annotations.Mapper;
 
-import com.neu.po.Lesson;
+import java.util.List;
 
 @Mapper
 public interface DemoMapper {
-	public List<Lesson> findLessons() throws Exception;
+    public List<Lesson> findLessons() throws Exception;
 }

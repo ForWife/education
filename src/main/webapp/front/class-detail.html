@@ -1,97 +1,101 @@
 <!doctype html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-        <link rel="stylesheet" href="css/mui.min.css">
-        <link rel="stylesheet" href="css/class-detail.css">
-		<link rel="stylesheet" href="css/icons-extra.css">
-		
-		<style>
-			html,
-			body {
-				background-color: #efeff4;
-			}	
-		</style>
-		
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RRjhtVzUCi4IkW324GgWHPa6q3ntuYhb"></script>
-    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
-    <script src="/js/mui.min.js"></script>    
-    </head>
-    
-	<body>
-	
-		<header class="mui-bar mui-bar-nav">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">课程详情</h1>
-		</header>
-		
-		<div class="mui-content">
-			
-			<div class="class_detail_info">
-			<div class="class_detail_address">门店地址：恒大名都</div>
-			<div class="class_detail_tel">Tel:13569680110</div>
-			</div>
-			
-			<div id="allmap"></div>
-	
-			<div class="map_up">				
-				<div class="map_up_word">点击查看课程详情<span class="mui-icon mui-icon-arrowup"></span></div>					
-			</div>
-			
-			<div class="map_bottom">
-				<div>试听课：绝望</div>
-			<button type="button" style=" height: 30px; margin: 11.5px 5px 11.5px auto; float: right;" class="mui-btn mui-btn-warning mui-btn-outlined">预约</button>
-			</div>
-			
-			
-			<div class="class_detail" style=" display: none;">
-				<div class="map_down">点击取消查看详情<span class="mui-icon mui-icon-arrowdown"></span></div>
-				<div class="class_detail_title">
-					<div>试听课：绝望</div>
-			        <button type="button" style=" height: 30px; margin: 11.5px 5px 11.5px auto; float: right;" class="mui-btn mui-btn-warning mui-btn-outlined">预约</button>
-				</div>
-				
-				<div class="class_detail_word">
-					这里放富文本 哈啊啊唉唉唉啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
-				</div>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/class-detail.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
 
-				
-				
-			</div>
-			
-			
-			
-		</div>
-	</body>
-	
-	<script src="js/mui.min.js"></script>	
-	<script>
-		mui.init({
-			swipeBack: true //启用右滑关闭功能
-		});
-	</script>
-	<script type="text/javascript" src="js/class_detail.js"></script>
-	<script type="text/javascript">
-		var map = new BMap.Map("allmap");
-		map.centerAndZoom(new BMap.Point(116.331398, 39.897445), 11);
-		map.enableScrollWheelZoom(true);
-		var new_point = new BMap.Point(100, 20);
-		var marker = new BMap.Marker(new_point);
-		map.addOverlay(marker);
-		map.panTo(new_point);
-		map.zoomOut();
-		map.zoomOut();
-		map.zoomOut();
-		map.zoomOut(); //缩放比例
-		var top_left_control = new BMap.ScaleControl({
-			anchor: BMAP_ANCHOR_TOP_LEFT
-		}); // 左上角，添加比例尺 
-//		var top_left_navigation = new BMap.NavigationControl(); //左上角，添加默认缩放平移控件 
-		map.addControl(top_left_control);
-//		map.addControl(top_left_navigation);
-	</script>
+    <style>
+        html,
+        body {
+            background-color: #efeff4;
+        }
+    </style>
+
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=RRjhtVzUCi4IkW324GgWHPa6q3ntuYhb"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+    <script src="/js/mui.min.js"></script>
+</head>
+
+<body>
+
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">课程详情</h1>
+</header>
+
+<div class="mui-content">
+
+    <div class="class_detail_info">
+        <div class="class_detail_address">门店地址：恒大名都</div>
+        <div class="class_detail_tel">Tel:13569680110</div>
+    </div>
+
+    <div id="allmap"></div>
+
+    <div class="map_up">
+        <div class="map_up_word">点击查看课程详情<span class="mui-icon mui-icon-arrowup"></span></div>
+    </div>
+
+    <div class="map_bottom">
+        <div>试听课：绝望</div>
+        <button type="button" style=" height: 30px; margin: 11.5px 5px 11.5px auto; float: right;"
+                class="mui-btn mui-btn-warning mui-btn-outlined">预约
+        </button>
+    </div>
+
+
+    <div class="class_detail" style=" display: none;">
+        <div class="map_down">点击取消查看详情<span class="mui-icon mui-icon-arrowdown"></span></div>
+        <div class="class_detail_title">
+            <div>试听课：绝望</div>
+            <button type="button" style=" height: 30px; margin: 11.5px 5px 11.5px auto; float: right;"
+                    class="mui-btn mui-btn-warning mui-btn-outlined">预约
+            </button>
+        </div>
+
+        <div class="class_detail_word">
+            这里放富文本 哈啊啊唉唉唉啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+
+<script src="js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+</script>
+<script type="text/javascript" src="js/class_detail.js"></script>
+<script type="text/javascript">
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.331398, 39.897445), 11);
+    map.enableScrollWheelZoom(true);
+    var new_point = new BMap.Point(100, 20);
+    var marker = new BMap.Marker(new_point);
+    map.addOverlay(marker);
+    map.panTo(new_point);
+    map.zoomOut();
+    map.zoomOut();
+    map.zoomOut();
+    map.zoomOut(); //缩放比例
+    var top_left_control = new BMap.ScaleControl({
+        anchor: BMAP_ANCHOR_TOP_LEFT
+    }); // 左上角，添加比例尺
+    //		var top_left_navigation = new BMap.NavigationControl(); //左上角，添加默认缩放平移控件
+    map.addControl(top_left_control);
+    //		map.addControl(top_left_navigation);
+</script>
 
 </html>
