@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" type="text/css" href="css/row4cols.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link href="css/row4cols.css">
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet"  href="css/app.css" >
+		<link rel="stylesheet" href="css/row4cols.css">
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<div class="mui-content">
+			
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/yuantiao.jpg">
+							<p class="mui-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/shuijiao.jpg">
+							<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/muwu.jpg">
+							<p class="mui-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/cbd.jpg">
+							<p class="mui-slider-title">Color of SIP CBD</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/yuantiao.jpg">
+							<p class="mui-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/shuijiao.jpg">
+							<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator mui-text-right">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+		<br>
+				<div  class="segment" >
+					<a href="#" id="company" class="segitem" >企业介绍</a>
+					<a href="#" id="teacher" class="segitem" >师资力量</a>
+					<a href="#" class="segitem" >学校位置</a>
+					<a href="#" class="segitem" >联系我们</a>
+				</div>	
+		
+    	<!--
+        	作者：offline
+        	时间：2018-06-24
+        	描述：卡片列表
+        -->
+    	
+    	<div class="mui-card" >
+    		<div class="mui-card-header" >试听课
+    			<a href="b.html"style="float:right;" >更多</a>
+    		</div>
+				<a href="a.html" class="mui-card-header mui-card-media" 
+					style="height:40vw;background-image:url(images/cbd.jpg)">
+				</a>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>具体开课时间：昨天</p>
+						<p style="color: #333;">关于py的课程</p>
+					</div>
+				</div>
+				<hr>
+				<a href="a.html" class="mui-card-header mui-card-media" 
+					style="height:40vw;background-image:url(images/cbd.jpg)">
+				</a>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>具体开课时间：昨天</p>
+						<p style="color: #333;">关于py的课程</p>
+					</div>
+				</div>
+			</div>
+	
+    	<div class="mui-card">
+    		<div class="mui-card-header" >付费课
+    			<a href="b.html" style="float:right;">更多</a>
+    		</div>
+				<a href="a.html" class="mui-card-header mui-card-media" 
+					style="height:40vw;background-image:url(images/cbd.jpg)">
+    			</a>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>具体开课时间：昨天</p>
+						<p style="color: #333;">关于py的课程</p>
+					</div>
+				</div>
+				<hr>
+				<a href="a.html" class="mui-card-header mui-card-media" 
+					style="height:40vw;background-image:url(images/cbd.jpg)">
+    			</a>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>具体开课时间：昨天</p>
+						<p style="color: #333;">关于py的课程</p>
+					</div>
+				</div>
+				
+			</div>
+		<br><br><br>
+	</body>
+	
+	<script src="js/mui.min.js"></script>
+			<script>
+				mui.init({
+//					swipeBack:true //启用右滑关闭功能
+				});
+				var slider = mui("#slider");
+				slider.slider({
+					interval: 5000
+				});
+			</script>
+		<script>
+			mui('body').on('tap','a',function(){document.location.href=this.href;});
+			mui.plusReady(function() {
+					
+							document.getElementById("company").addEventListener("tap", function() {
+									mui.openWindow({
+											url: "home-company-intro.html"
+									});
+							});
+							document.getElementById("teacher").addEventListener("tap", function() {
+									mui.openWindow({
+											url: "home-teacher-list.html"
+									});
+							
+							});
+					});
+					
+		</script>
+</html>

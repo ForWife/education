@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>待处理的预约</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/myreserve.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.title {
+				padding: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reservecardback">
+							<div class="reservecard">
+								
+								<div class="reservecard_up">
+									<div class="reservecard_time">2018-06-15 12:20:30</div>
+								    <div class="reservecard_state_checking">待处理</div>
+								</div>
+								
+								<div class="reservecard_body">
+									<div class="reservecard_pic"><img src="images/cbd.jpg" ></div>
+								    <div class="reservecard_intr">							   
+								    <p>试听课：绝望</p>	
+								    <span class="time_p">2018-06-21开课</span><br />
+								     这是一门教你如何绝望的课程，让每一个有希望的人都陷入深深的绝望之中！
+								    </div>
+								    
+								</div>
+								
+								<div class="reservecard_down">
+									<div class="teacher_intr">
+										<p>授课老师：费圆圆</p>
+										<span class="time_p">授人以鱼不如授人以愚</span><br />
+										国家级别IT僵尸，曾在人民大会堂修改宪法，成功连任300年“最佳IT讲师”！
+									</div>
+									<div class="teacher_pic"><img src="images/fyy.jpg" ></div>
+								</div>
+								
+							</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: false,
+				keyEventBind: {
+					backbutton: false //关闭back按键监听
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+{
+	"index.html": {
+		"resources": [
+			"tab-webview-home.html"
+		],
+		"refer": [
+			"tab-webview-mypage.html",
+			"tab-webview-discover.html",
+			"tab-webview-home.html",
+			"tab-webview-class.html"
+		]
+	},
+	"tab-webview-discover.html": {
+		"resources": [
+			"/js/mui.min.js"
+		]
+	},
+	"my-reserve.html": {
+		"resources": [
+			"myreserve-allreserve.html"
+		],
+		"refer": [
+			"myreserve-allreserve.html",
+			"myreserve-reserved.html",
+			"myreserve-reserveing.html"
+		]
+	},
+	"tab-webview-mypage.html": {
+		"refer": [
+			"my-reserve.html",
+			"my-order.html"
+		]
+	},
+	"my-order.html": {
+		"resources": [
+			"myorder-allorder.html"
+		],
+		"refer": [
+			"myorder-allorder.html",
+			"myorder-paying.html",
+			"myorder-paied.html",
+			"myorder-cancel.html",
+			"myorder-used.html"
+		]
+	},
+	"class-detail.html": {
+		"resources": [
+			"/js/mui.min.js"
+		]
+	},
+	"tab-webview-class.html": {
+		"refer": [
+			"class-detail.html"
+		]
+	}
+}
