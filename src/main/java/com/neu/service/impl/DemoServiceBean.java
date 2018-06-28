@@ -18,7 +18,6 @@ public class DemoServiceBean implements DemoService {
         // TODO Auto-generated method stub
         System.out.println("..........DemoService..........findLessons.........");
         List<Lesson> list;
-
         try {
             list = demoMapper.findLessons();
             System.out.println("............DemoService..........findLessons.....OK");
