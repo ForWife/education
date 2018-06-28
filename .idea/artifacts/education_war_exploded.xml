@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="education:war exploded">
-    <output-path>$PROJECT_DIR$/target/education-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/education_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -31,9 +31,6 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.40" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/education-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="education/web/Web" />
     </root>
