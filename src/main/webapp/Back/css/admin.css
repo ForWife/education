@@ -148,11 +148,12 @@ html {
     margin-left: 130px
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
     .layui-form[wid100] .layui-form-item .layui-input-inline {
         margin-left: 132px
     }
-    .layui-form[wid100] .layui-form-item .layui-input-inline+.layui-form-mid {
+
+    .layui-form[wid100] .layui-form-item .layui-input-inline + .layui-form-mid {
         margin-left: 130px
     }
 }
@@ -184,7 +185,7 @@ html {
 }
 
 .layadmin-link {
-    color: #029789!important
+    color: #029789 !important
 }
 
 .layadmin-link:hover {
@@ -219,7 +220,7 @@ html {
 }
 
 .layui-layer-adminRight {
-    top: 50px!important;
+    top: 50px !important;
     bottom: 0;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
     border-radius: 0;
@@ -277,7 +278,7 @@ html {
 
 .layui-header .layui-nav .layui-this:after,
 .layui-layout-admin .layui-header .layui-nav-bar {
-    top: 0!important;
+    top: 0 !important;
     bottom: auto;
     height: 3px;
     background-color: #fff;
@@ -312,7 +313,7 @@ html {
     padding-right: 30px
 }
 
-.layui-side-menu .layui-nav .layui-nav-item>a {
+.layui-side-menu .layui-nav .layui-nav-item > a {
     padding-top: 8px;
     padding-bottom: 8px
 }
@@ -321,7 +322,7 @@ html {
     background: 0 0
 }
 
-.layui-side-menu .layui-nav .layui-nav-itemed>.layui-nav-child {
+.layui-side-menu .layui-nav .layui-nav-itemed > .layui-nav-child {
     padding: 5px 0
 }
 
@@ -333,7 +334,7 @@ html {
 }
 
 .layui-side-menu .layui-nav .layui-nav-child .layui-nav-child {
-    background: 0 0!important
+    background: 0 0 !important
 }
 
 .layui-side-menu .layui-nav .layui-nav-child .layui-nav-child a {
@@ -344,12 +345,13 @@ html {
     right: 15px
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
     .layui-layout-admin .layui-side {
         transform: translate3d(-220px, 0, 0);
         -webkit-transform: translate3d(-220px, 0, 0);
         width: 220px
     }
+
     .layadmin-pagetabs,
     .layui-layout-admin .layui-body,
     .layui-layout-admin .layui-footer,
@@ -388,19 +390,19 @@ html {
     position: static
 }
 
-.layadmin-side-shrink .layui-side-menu .layui-nav-item>a {
+.layadmin-side-shrink .layui-side-menu .layui-nav-item > a {
     padding-right: 0
 }
 
 .layadmin-side-shrink .layui-side-menu .layui-nav-item cite,
-.layadmin-side-shrink .layui-side-menu .layui-nav>.layui-nav-item>.layui-nav-child,
-.layadmin-side-shrink .layui-side-menu .layui-nav>.layui-nav-item>a .layui-nav-more {
+.layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > .layui-nav-child,
+.layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > a .layui-nav-more {
     display: none;
     padding: 8px 0;
     width: 200px
 }
 
-.layadmin-side-shrink .layui-side-menu .layui-nav>.layui-nav-itemed>a {
+.layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-itemed > a {
     background: rgba(0, 0, 0, .3)
 }
 
@@ -487,7 +489,7 @@ html {
     line-height: 40px
 }
 
-.layadmin-tabs-select.layui-nav .layui-nav-item>a {
+.layadmin-tabs-select.layui-nav .layui-nav-item > a {
     height: 40px
 }
 
@@ -503,7 +505,7 @@ html {
 
 .layadmin-tabs-select.layui-nav .layui-nav-child dd.layui-this,
 .layadmin-tabs-select.layui-nav .layui-nav-child dd.layui-this a {
-    background-color: #f2f2f2!important;
+    background-color: #f2f2f2 !important;
     color: #333
 }
 
@@ -695,7 +697,7 @@ html {
 }
 
 .layadmin-carousel {
-    height: 185px!important;
+    height: 185px !important;
     background-color: #fff
 }
 
@@ -712,7 +714,7 @@ html {
 }
 
 .layadmin-carousel .layui-carousel,
-.layadmin-carousel>[carousel-item]>* {
+.layadmin-carousel > [carousel-item] > * {
     background-color: #fff
 }
 
@@ -818,14 +820,14 @@ html {
 }
 
 .layadmin-dataview {
-    height: 332px!important
+    height: 332px !important
 }
 
-.layadmin-dataview>[carousel-item]:before {
+.layadmin-dataview > [carousel-item]:before {
     display: none
 }
 
-.layadmin-dataview>[carousel-item]>div {
+.layadmin-dataview > [carousel-item] > div {
     height: 332px
 }
 
@@ -860,7 +862,7 @@ html {
 }
 
 .layadmin-news {
-    height: 60px!important;
+    height: 60px !important;
     padding: 5px 0
 }
 
@@ -1115,7 +1117,7 @@ html {
     padding-bottom: 10px
 }
 
-.layuiadmin-card-status li>span {
+.layuiadmin-card-status li > span {
     color: #999
 }
 
@@ -1200,12 +1202,12 @@ html {
     overflow-x: hidden
 }
 
-.layadmin-setTheme>h5 {
+.layadmin-setTheme > h5 {
     padding: 20px 0 10px;
     color: #000
 }
 
-.layadmin-setTheme>h5:first-child {
+.layadmin-setTheme > h5:first-child {
     padding-top: 0
 }
 
@@ -1384,14 +1386,16 @@ html {
     display: inline-block
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .layadmin-panel-selection {
         margin: 0;
         width: auto
     }
+
     .layui-body .layui-nav .layui-nav-item {
         display: block
     }
+
     .layui-layout-admin .layui-body .layadmin-tabsbody-item {
         -webkit-overflow-scrolling: touch;
         overflow: auto

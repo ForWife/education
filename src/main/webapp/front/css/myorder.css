@@ -1,216 +1,194 @@
 
-.orderback
-{
-	width: 100%;
-	height: 100%;
+.orderback {
+    width: 100%;
+    height: 100%;
 }
 
-.ordercard
-{	
-	width: 100%;
-	margin: 0px auto 10px auto;
+.ordercard {
+    width: 100%;
+    margin: 0px auto 10px auto;
     background-color: #FFFFFF;
-    box-shadow: 0 1px 3px 0 rgba(0,37,55,.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 37, 55, .1);
     height: 264px;
-    
+
 }
 
-.ordercard_up
-{
-	height: 30px;
-	
+.ordercard_up {
+    height: 30px;
+
 }
 
-.ordercard_num
-{
-	float: left;
-	font-size: 12px;
-	margin:9px 6px;
-	line-height: 12px;
-	font-family: "黑体";
+.ordercard_num {
+    float: left;
+    font-size: 12px;
+    margin: 9px 6px;
+    line-height: 12px;
+    font-family: "黑体";
 }
 
-.ordercard_state_paying
-{
-	line-height: 12px;
-	float: right;
-	font-size: 12px;
-	margin:  9px 6px;
-	color: #EC971F;
-	font-family: "黑体";
+.ordercard_state_paying {
+    line-height: 12px;
+    float: right;
+    font-size: 12px;
+    margin: 9px 6px;
+    color: #EC971F;
+    font-family: "黑体";
 }
 
-.ordercard_state_paied
-{
-	line-height: 12px;
-	float: right;
-	font-size: 12px;
-	margin:  9px 6px;
-	color:#007aff;
-	font-family: "黑体";
-}
-.ordercard_state_used
-{
-	line-height: 12px;
-	float: right;
-	font-size: 12px;
-	margin:  9px 6px;
-	font-family: "黑体";
-}
-.ordercard_state_cancel
-{
-	line-height: 12px;
-	float: right;
-	font-size: 12px;
-	margin:  9px 6px;
-	color:#FF0000;
-	font-family: "黑体";
+.ordercard_state_paied {
+    line-height: 12px;
+    float: right;
+    font-size: 12px;
+    margin: 9px 6px;
+    color: #007aff;
+    font-family: "黑体";
 }
 
-
-.ordercard_body
-{
-	height: 110px;
-	background-color: #DDDDDD;
+.ordercard_state_used {
+    line-height: 12px;
+    float: right;
+    font-size: 12px;
+    margin: 9px 6px;
+    font-family: "黑体";
 }
 
-.ordercard_pic
-{
-	float: left;
-	height: 95px;
-	width: 95px;
-	margin: 6px auto 9px 15px;
-	overflow: hidden;
+.ordercard_state_cancel {
+    line-height: 12px;
+    float: right;
+    font-size: 12px;
+    margin: 9px 6px;
+    color: #FF0000;
+    font-family: "黑体";
 }
 
-.ordercard_pic img
-{
-	height: 95px; width:95px; overflow: hidden;
+.ordercard_body {
+    height: 110px;
+    background-color: #DDDDDD;
 }
 
-.ordercard_name
-{
-	height: 84px;
-	width: 160px;
-	float: left;
-	margin: 6px auto 0px 15px;
-	word-wrap:break-word;
-    word-break:break-all;
+.ordercard_pic {
+    float: left;
+    height: 95px;
+    width: 95px;
+    margin: 6px auto 9px 15px;
+    overflow: hidden;
+}
+
+.ordercard_pic img {
+    height: 95px;
+    width: 95px;
+    overflow: hidden;
+}
+
+.ordercard_name {
+    height: 84px;
+    width: 160px;
+    float: left;
+    margin: 6px auto 0px 15px;
+    word-wrap: break-word;
+    word-break: break-all;
     font-size: 11px;
-	color: #8f8f94;
-	overflow: hidden;
-	line-height: 15px;
-	
+    color: #8f8f94;
+    overflow: hidden;
+    line-height: 15px;
+
 }
-.ordercard_name p
-{
-	color: #000000;
-	font-family: "黑体";
-	font-size: 13px;
-	word-wrap:break-word;
-    word-break:break-all;
+
+.ordercard_name p {
+    color: #000000;
+    font-family: "黑体";
+    font-size: 13px;
+    word-wrap: break-word;
+    word-break: break-all;
     margin-bottom: 0px;
 }
-.ordercard_price
-{
-	font-size: 12px;
-	float: right;
-	height: 60px;
-	margin: 6px 10px 5px auto;
-	color: #8f8f94;
-	width: 40px;
-	text-align: right;
-	word-wrap:break-word;
-    word-break:break-all;	
+
+.ordercard_price {
+    font-size: 12px;
+    float: right;
+    height: 60px;
+    margin: 6px 10px 5px auto;
+    color: #8f8f94;
+    width: 40px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-
-
-
-.time_p
-{
-	font-family: "consolas";
-	color:#F0AD4E;
-	font-size: 11px;
+.time_p {
+    font-family: "consolas";
+    color: #F0AD4E;
+    font-size: 11px;
 }
 
-.teachercard
-{
-	height: 80px;
-	box-shadow: 0 0px 1px rgba(0,0,0,.3);
+.teachercard {
+    height: 80px;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, .3);
 
 }
 
-
-.teacher_pic
-{
-	float: right;
-	height: 66px;
-	width: 66px;
-	overflow: hidden;
-   margin: 5px 20px 7px auto;
+.teacher_pic {
+    float: right;
+    height: 66px;
+    width: 66px;
+    overflow: hidden;
+    margin: 5px 20px 7px auto;
 }
-.teacher_pic img
-{
-	height: 66px;
-	width: 66px;
+
+.teacher_pic img {
+    height: 66px;
+    width: 66px;
     display: flex;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-	
+
 }
 
-.teacher_intr
-{
-	height: 74px;	
-	width: 220px;
-	float: left;
-	margin: 6px auto 0px 15px;
-	word-wrap:break-word;
-    word-break:break-all;
+.teacher_intr {
+    height: 74px;
+    width: 220px;
+    float: left;
+    margin: 6px auto 0px 15px;
+    word-wrap: break-word;
+    word-break: break-all;
     font-size: 10px;
-	color: #8f8f94;
-	overflow: hidden;
-	line-height: 15px;
+    color: #8f8f94;
+    overflow: hidden;
+    line-height: 15px;
 }
 
-.teacher_intr p
-{
-	color: #000000;
-	font-family: "黑体";
-	font-size: 13px;
-	word-wrap:break-word;
-    word-break:break-all;
+.teacher_intr p {
+    color: #000000;
+    font-family: "黑体";
+    font-size: 13px;
+    word-wrap: break-word;
+    word-break: break-all;
     margin-bottom: 0px;
 }
 
-
-.ordercard_down
-{
-	height: 44px;
+.ordercard_down {
+    height: 44px;
 }
 
-.orderbutton button
-{
-	float: right;
-	background-color: transparent;
+.orderbutton button {
+    float: right;
+    background-color: transparent;
     position: relative;
     display: inline-block;
     margin-bottom: 0;
     margin: 5px 12px;
-    border-radius:3px;   
+    border-radius: 3px;
 }
 
-.orderbuttonpay button
-{
-	float: right;
+.orderbuttonpay button {
+    float: right;
     position: relative;
     display: inline-block;
     margin-bottom: 0;
     margin: 5px 12px;
-    border-radius: 3px;   
+    border-radius: 3px;
     color: #fff;
     border: 1px solid #007aff;
     background-color: #007aff;
