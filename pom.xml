@@ -6,15 +6,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>education</name>
     <dependencies>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-
-
         <!-- 配置spring基础依赖 -->
         <dependency>
             <groupId>org.springframework</groupId>
