@@ -1,0 +1,18 @@
+
+.segment {
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    width: 100%;
+    border: 0px solid #007aff;
+    background-color: white;
+}
+
+.segitem {
+    line-height: 38px;
+    display: table-cell;
+    width: 1%;
+    text-align: center;
+    color: #007aff;
+    border-color: #007aff;
+}
